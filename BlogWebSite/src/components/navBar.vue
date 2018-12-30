@@ -46,6 +46,9 @@ export default{
 		currentActiveItem_Computed:{
 			get:function(){
 				this.currentItemActive = window.location.hash.substr(2)
+				if(this.currentItemActive == ''){
+					this.currentItemActive='recommand'
+				}
 				return this.currentItemActive
 			},
 			set:function(value){

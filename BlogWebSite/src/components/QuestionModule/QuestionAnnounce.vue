@@ -67,7 +67,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 .quesannouitem{
-  margin: 10px;
+  margin: 5px;
   margin-left: 0;
   height: 40px;
   width: 100%;
@@ -78,7 +78,8 @@ export default {
 }
 .quesannouitemtitle{
   color: #626567;
+  padding-left:5px;
+  padding-top: 10px;
   margin: 10px;
-  vertical-align: middle;
 }
 </style>

@@ -1,0 +1,41 @@
+<template>
+  <div id="SearchResource">
+    <el-input placeholder="搜索资源" 
+              v-model="searchContent"
+              clearable
+              class='searchresinput'/>
+    <el-button type="primary" 
+               icon="el-icon-search"
+               class="searchresbutton">
+              搜索
+    </el-button>
+  </div>
+</template>
+
+<script>
+export default {
+	name:'SearchResource',
+  data(){
+      return{
+        searchContent:''
+      }
+  }
+}
+</script>
+
+<style>
+#SearchResource{
+  margin-left: 40px;
+  width: 100%;
+}
+.searchresinput{
+  margin-top: 10px;
+  width: 70%;
+}
+.searchresbutton{
+  margin-top: 10px;
+  margin-right: 20px;
+  width: 20%;
+  display: inline-block;
+}
+</style>

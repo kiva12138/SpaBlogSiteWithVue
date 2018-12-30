@@ -2,7 +2,7 @@
 
 Tools: @Vue/cli, Webpack, npm, Sublime...
 
-The purpose of this reps is just to learn the SPA application.
+The purpose of this repo is just to learn the SPA application.
 
 This Demo is unfinished.
 

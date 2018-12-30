@@ -1,18 +1,20 @@
 <template>
-  <div id="BlogStar">
-    <span class='line'></span>
-    <h3 class='startitle'>博客达人</h3>
-    <ul class='staritems'>
-      <li v-for="staritem in starItems"
-          class='staritem'>
-        <div class='staritempic'>
-          <img v-bind:src="staritem.headurl" 
-                v-bind:alt="staritem.name+'的头像'"
+  <div id="QuestionStar">
+    <span class='quesline'></span>
+    <h3 class='quesstartitle'>博客达人</h3>
+    <ul class='quesstaritems'>
+      <li v-for="quesstaritem in quesStarItems"
+          class='quesstaritem'>
+        <div class='quesstaritempic'>
+          <img v-bind:src="quesstaritem.headurl" 
+                v-bind:alt="quesstaritem.name+'的头像'"
                 height='80px'/>
         </div>
-        <div class='starcontent'>
-          <div class='staritemname'>{{staritem.name}}</div>
-          <div class='staritemdes'>{{staritem.description}}</div>
+        <div class='quesstarcontent'>
+          <div class='quesstaritemname'>{{quesstaritem.name}}</div>
+          <div class='quesstaritemdes'>
+            {{quesstaritem.description}}
+          </div>
         </div>
       </li>
     </ul>
@@ -21,10 +23,10 @@
 
 <script>
 export default {
-	name:'BlogStar',
+	name:'QuestionStar',
   data(){
       return{
-        starItems:[
+        quesStarItems:[
           {
             name:'Name1',
             description:'Description1',
@@ -62,22 +64,22 @@ export default {
 </script>
 
 <style>
-#BlogStar{
+#QuestionStar{
   margin-left: 20px;
   margin-top: 20px;
 }
-.line{
+.quesline{
   padding-left: 10px;
   margin-left: 30px;
   background: #2E86C1;
 }
-.startitle{
+.quesstartitle{
   color: #2E86C1;
   padding-left: 20px;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   display: inline-block;
 }
-.staritems{
+.quesstaritems{
   list-style-type:none;
   margin-left: 10px;
   margin-right: 10px;
@@ -85,33 +87,33 @@ export default {
   padding-right: 20px;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
-.staritem{
+.quesstaritem{
   margin: 10px;
   margin-left: 0;
   height: 100px;
   width: 100%;
 }
-.staritem:hover{
+.quesstaritem:hover{
   background: #F2F3F4;
   cursor: pointer;
 }
-.staritempic{
+.quesstaritempic{
   margin: 10px;
   width: 20%;
   display: inline-block;
   vertical-align: middle;
 }
-.starcontent{
+.quesstarcontent{
   margin: 10px;
   width: 65%;
   display: inline-block;
   vertical-align: middle;
 }
-.staritemname{
+.quesstaritemname{
   color: #626567;
   margin: 10px;
 }
-.staritemdes{
+.quesstaritemdes{
   color: #626567;
   margin: 10px;
 } 

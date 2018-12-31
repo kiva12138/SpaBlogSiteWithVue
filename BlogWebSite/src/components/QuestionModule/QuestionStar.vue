@@ -3,10 +3,11 @@
     <span class='quesline'></span>
     <h3 class='quesstartitle'>博客达人</h3>
     <ul class='quesstaritems'>
-      <li v-for="quesstaritem in quesStarItems"
-          class='quesstaritem'>
+      <li v-for="(quesstaritem, index) in quesStarItems"
+          class='quesstaritem'
+          v-bind:key='index'>
         <div class='quesstaritempic'>
-          <img v-bind:src="quesstaritem.headurl" 
+          <img v-bind:src="quesstaritem.headurl"
                 v-bind:alt="quesstaritem.name+'的头像'"
                 height='80px'/>
         </div>
@@ -23,42 +24,42 @@
 
 <script>
 export default {
-	name:'QuestionStar',
-  data(){
-      return{
-        quesStarItems:[
-          {
-            name:'Name1',
-            description:'Description1',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name2',
-            description:'Description2',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name3',
-            description:'Description3',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name4',
-            description:'Description4',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name5',
-            description:'Description5',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          }
-        ]
-      }
+  name: 'QuestionStar',
+  data () {
+    return {
+      quesStarItems: [
+        {
+          name: 'Name1',
+          description: 'Description1',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name2',
+          description: 'Description2',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name3',
+          description: 'Description3',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name4',
+          description: ' Description4',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name5',
+          description: 'Description5',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        }
+      ]
+    }
   }
 }
 </script>
@@ -116,5 +117,5 @@ export default {
 .quesstaritemdes{
   color: #626567;
   margin: 10px;
-} 
+}
 </style>

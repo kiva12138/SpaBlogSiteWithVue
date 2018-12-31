@@ -1,10 +1,10 @@
 <template>
   <div id="SearchBlog">
-    <el-input placeholder="搜索博客" 
+    <el-input placeholder="搜索博客"
               v-model="searchContent"
               clearable
               class='searchinput'/>
-    <el-button type="primary" 
+    <el-button type="primary"
                icon="el-icon-search"
                class="searchbutton">
               搜索
@@ -14,11 +14,11 @@
 
 <script>
 export default {
-	name:'SearchBlog',
-  data(){
-      return{
-        searchContent:''
-      }
+  name: 'SearchBlog',
+  data () {
+    return {
+      searchContent: ''
+    }
   }
 }
 </script>

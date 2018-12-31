@@ -3,8 +3,9 @@
     <span class=quesannouline></span>
     <h3 class='quesannoutitle'>论坛公告</h3>
     <ul class='quesannouitems'>
-      <li v-for="quesannouitem in quesAnnounceItems"
-          class='quesannouitem'>
+      <li v-for="(quesannouitem, index) in quesAnnounceItems"
+          class='quesannouitem'
+          v-bind:key='index'>
         <div class='quesannouitemtitle'>{{quesannouitem.title}}</div>
       </li>
     </ul>
@@ -13,32 +14,32 @@
 
 <script>
 export default {
-	name:'QuestionAnnounce',
-  data(){
-      return{
-        quesAnnounceItems:[
-          {
-            title:'This is Title1',
-            url:''
-          },
-          {
-            title:'This is Title2',
-            url:''
-          },
-          {
-            title:'This is Title3',
-            url:''
-          },
-          {
-            title:'This is Title4',
-            url:''
-          },
-          {
-            title:'This is Title5',
-            url:''
-          }
-        ]
-      }
+  name: 'QuestionAnnounce',
+  data () {
+    return {
+      quesAnnounceItems: [
+        {
+          title: 'This is Title1',
+          url: ''
+        },
+        {
+          title: 'This is Title2',
+          url: ''
+        },
+        {
+          title: 'This is Title3',
+          url: ''
+        },
+        {
+          title: 'This is Title4',
+          url: ''
+        },
+        {
+          title: 'This is Title5',
+          url: ''
+        }
+      ]
+    }
   }
 }
 </script>

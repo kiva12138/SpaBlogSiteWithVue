@@ -3,17 +3,17 @@
     <span class=contactusaboutresline></span>
     <h3 class='contactusaboutres'>举报资源或联系我们</h3>
     <div class=contactusaboutreswechat>
-      <img src="./../../assets/wechat.jpg" 
+      <img src="./../../assets/wechat.jpg"
                 alt="微信二维码"
                 height='120px'/>
       <div class='contactusaboutreswechathint'>扫一扫添加我们微信</div>
     </div>
-    <div class=contactusaboutresqq>QQ: 
+    <div class=contactusaboutresqq>QQ:
       <a href="http://wpa.qq.com/msgrd?v=3&uin=1574143668&site=qq&menu=yes">
         1574143668
       </a>
     </div>
-    <div class=contactusaboutresemail>EMail: 
+    <div class=contactusaboutresemail>EMail:
       <a href="mailto:1574143668@qq.com">
         1574143668@qq.com
       </a>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-	name:'ContactUsAboutResource'
+  name: 'ContactUsAboutResource'
 }
 </script>
 

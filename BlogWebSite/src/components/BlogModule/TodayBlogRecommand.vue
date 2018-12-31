@@ -3,10 +3,11 @@
     <span class=line></span>
     <h3 class='todayblogtitle'>今日博客推荐</h3>
     <ul class='todayblogitems'>
-      <li v-for="todayblogitem in todayBlogItems"
-          class='todayblogitem'>
+      <li v-for="(todayblogitem, index) in todayBlogItems"
+          class='todayblogitem'
+          v-bind:key='index'>
         <div class='todayblogitempic'>
-          <img src="./../../assets/vuelogo.png" 
+          <img src="./../../assets/vuelogo.png"
                 v-bind:alt="todayblogitem.title"
                 height='80px'/>
         </div>
@@ -18,37 +19,37 @@
 
 <script>
 export default {
-	name:'TodayBlogRecommand',
-  data(){
-      return{
-        todayBlogItems:[
-          {
-            title:'This is Title1',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title2',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title3',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title4',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title5',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          }
-        ]
-      }
+  name: 'TodayBlogRecommand',
+  data () {
+    return {
+      todayBlogItems: [
+        {
+          title: 'This is Title1',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title2',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title3',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title4',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title5',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        }
+      ]
+    }
   }
 }
 </script>

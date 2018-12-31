@@ -3,10 +3,11 @@
     <span class='line'></span>
     <h3 class='startitle'>博客达人</h3>
     <ul class='staritems'>
-      <li v-for="staritem in starItems"
-          class='staritem'>
+      <li v-for="(staritem, index) in starItems"
+          class='staritem'
+          v-bind:key='index'>
         <div class='staritempic'>
-          <img v-bind:src="staritem.headurl" 
+          <img v-bind:src="staritem.headurl"
                 v-bind:alt="staritem.name+'的头像'"
                 height='80px'/>
         </div>
@@ -21,42 +22,42 @@
 
 <script>
 export default {
-	name:'BlogStar',
-  data(){
-      return{
-        starItems:[
-          {
-            name:'Name1',
-            description:'Description1',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name2',
-            description:'Description2',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name3',
-            description:'Description3',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name4',
-            description:'Description4',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name5',
-            description:'Description5',
-            url:'',
-            headurl:require('./../../assets/head.png')
-          }
-        ]
-      }
+  name: 'BlogStar',
+  data () {
+    return {
+      starItems: [
+        {
+          name: 'Name1',
+          description: 'Description1',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name2',
+          description: 'Description2',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name3',
+          description: 'Description3',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name4',
+          description: 'Description4',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name5',
+          description: 'Description5',
+          url: '',
+          headurl: require('./../../assets/head.png')
+        }
+      ]
+    }
   }
 }
 </script>
@@ -114,5 +115,5 @@ export default {
 .staritemdes{
   color: #626567;
   margin: 10px;
-} 
+}
 </style>

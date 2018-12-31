@@ -1,7 +1,8 @@
 <template>
   <div id="MainRecommand">
     <ul class='mainitems'>
-      <li v-for="main_item in mainItems" class='mainitem'>
+      <li v-for="(main_item, index) in mainItems" class='mainitem'
+          v-bind:key='index'>
         <div class='itemcontent'>
           <h3 class='itemtitle'>
             {{main_item.title}}
@@ -23,82 +24,82 @@
 
 <script>
 export default {
-	name:'MainRecommand',
-  data(){
-    return{
-      mainItems:[
+  name: 'MainRecommand',
+  data () {
+    return {
+      mainItems: [
         {
-          title:'Title1',
-          headline:'Headline1',
-          url:'',
-          time:'2018-12-29',
-          heat:256
+          title: 'Title1',
+          headline: 'Headline1',
+          url: '',
+          time: '2018-12-29',
+          heat: 256
         },
         {
-          title:'Title2',
-          headline:'Headline2',
-          url:'',
-          time:'2018-12-19',
-          heat:239
+          title: 'Title2',
+          headline: 'Headline2',
+          url: '',
+          time: '2018-12-19',
+          heat: 239
         },
         {
-          title:'Title3',
-          headline:'Headline3',
-          url:'',
-          time:'2018-11-11',
-          heat:98
+          title: 'Title3',
+          headline: 'Headline3',
+          url: '',
+          time: '2018-11-11',
+          heat: 98
         },
         {
-          title:'Title4',
-          headline:'Headline4',
-          url:'',
-          time:'2018-12-1',
-          heat:267
+          title: 'Title4',
+          headline: 'Headline4',
+          url: '',
+          time: '2018-12-1',
+          heat: 267
         },
         {
-          title:'Title5',
-          headline:'Headline5',
-          url:'',
-          time:'2018-11-7',
-          heat:132
+          title: 'Title5',
+          headline: 'Headline5',
+          url: '',
+          time: '2018-11-7',
+          heat: 132
         },
         {
-          title:'Title6',
-          headline:'Headline6',
-          url:'',
-          time:'2018-10-9',
-          heat:217
+          title: 'Title6',
+          headline: 'Headline6',
+          url: '',
+          time: '2018-10-9',
+          heat: 217
         },
         {
-          title:'Title7',
-          headline:'Headline7',
-          url:'',
-          time:'2018-10-26',
-          heat:24
+          title: 'Title7',
+          headline: 'Headline7',
+          url: '',
+          time: '2018-10-26',
+          heat: 24
         },
         {
-          title:'Title8',
-          headline:'Headline8',
-          url:'',
-          time:'2018-10-3',
-          heat:85
+          title: 'Title8',
+          headline: 'Headline8',
+          url: '',
+          time: '2018-10-3',
+          heat: 85
         },
         {
-          title:'Title9',
-          headline:'Headline9',
-          url:'',
-          time:'2018-10-4',
-          heat:56
+          title: 'Title9',
+          headline: 'Headline9',
+          url: '',
+          time: '2018-10-4',
+          heat: 56
         },
         {
-          title:'Title10',
-          headline:'Headline10',
-          url:'',
-          time:'2018-11-2',
-          heat:26
+          title: 'Title10',
+          headline: 'Headline10',
+          url: '',
+          time: '2018-11-2',
+          heat: 26
         }
       ]
-    } 
+    }
   }
 }
 </script>

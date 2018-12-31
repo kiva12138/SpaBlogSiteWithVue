@@ -8,9 +8,13 @@ Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
-new Vue({
-  el: '#app',
-  router,
-  components: { 'App': App},
-  template:'<App/>'
-})
+let app = new Vue(
+  {
+    el: '#app',
+    router,
+    components: {'App': App},
+    template: '<App/>'
+  }
+)
+
+Vue.use(app)

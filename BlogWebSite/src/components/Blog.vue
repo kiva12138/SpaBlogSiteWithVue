@@ -19,13 +19,13 @@ import PicBlogRecommand from './BlogModule/PicBlogRecommand.vue'
 import SearchBlog from './BlogModule/SearchBlog.vue'
 import TodayBlogRecommand from './BlogModule/TodayBlogRecommand.vue'
 export default {
-	name: 'Blog',
-  components:{
-    'blogstar':BlogStar,
-    'mainblogrecommand':MainBlogRecommand,
-    'picblogrecommand':PicBlogRecommand,
-    'searchblog':SearchBlog,
-    'todayblogrecommand':TodayBlogRecommand
+  name: 'Blog',
+  components: {
+    'blogstar': BlogStar,
+    'mainblogrecommand': MainBlogRecommand,
+    'picblogrecommand': PicBlogRecommand,
+    'searchblog': SearchBlog,
+    'todayblogrecommand': TodayBlogRecommand
   }
 }
 </script>

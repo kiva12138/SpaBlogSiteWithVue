@@ -3,7 +3,9 @@
   <span class=hotresline></span>
   <h3 class='hotrestitle'>资源•最热</h3>
     <ul class='hotresitems'>
-      <li v-for="hotres_item in hotresItems" class='hotresitem'>
+      <li v-for="(hotres_item, index) in hotresItems"
+          class='hotresitem'
+          v-bind:key='index'>
         <div class='hotresitemcontent'>
           <h3 class='hotresitemtitle'>
             {{hotres_item.title}}
@@ -25,61 +27,61 @@
 
 <script>
 export default {
-	name:'HotResource',
-  data(){
-    return{
-      hotresItems:[
+  name: 'HotResource',
+  data () {
+    return {
+      hotresItems: [
         {
-          title:'Title1',
-          format:'MP3',
-          url:'',
-          time:'2018-12-29',
-          num:256
+          title: 'Title1',
+          format: 'MP3',
+          url: '',
+          time: '2018-12-29',
+          num: 256
         },
         {
-          title:'Title2',
-          format:'RMVB',
-          url:'',
-          time:'2018-12-19',
-          num:256
+          title: 'Title2',
+          format: 'RMVB',
+          url: '',
+          time: '2018-12-19',
+          num: 256
         },
         {
-          title:'Title3',
-          format:'CPP',
-          url:'',
-          time:'2018-11-11',
-          num:256
+          title: 'Title3',
+          format: 'CPP',
+          url: '',
+          time: '2018-11-11',
+          num: 256
         },
         {
-          title:'Title4',
-          format:'MP3',
-          url:'',
-          time:'2018-12-1',
-          num:256
+          title: 'Title4',
+          format: 'MP3',
+          url: '',
+          time: '2018-12-1',
+          num: 256
         },
         {
-          title:'Title5',
-          format:'MP3',
-          url:'',
-          time:'2018-11-7',
-          num:256
+          title: 'Title5',
+          format: 'MP3',
+          url: '',
+          time: '2018-11-7',
+          num: 256
         },
         {
-          title:'Title6',
-          format:'MP3',
-          url:'',
-          time:'2018-11-7',
-          num:256
+          title: 'Title6',
+          format: 'MP3',
+          url: '',
+          time: '2018-11-7',
+          num: 256
         },
         {
-          title:'Title7',
-          format:'MP3',
-          url:'',
-          time:'2018-11-7',
-          num:256
+          title: 'Title7',
+          format: 'MP3',
+          url: '',
+          time: '2018-11-7',
+          num: 256
         }
       ]
-    } 
+    }
   }
 }
 </script>
@@ -105,7 +107,7 @@ export default {
 }
 .hotresitemtitle{
   color: #7B7D7D;
-  padding-left: 10px; 
+  padding-left: 10px;
   padding-top: 0px;
   margin-top: 10px;
   width: 60%;

@@ -3,17 +3,17 @@
     <span class=line></span>
     <h3 class='contactus'>联系我们</h3>
     <div class=wechat>
-      <img src="./../../assets/wechat.jpg" 
+      <img src="./../../assets/wechat.jpg"
                 alt="微信二维码"
                 height='120px'/>
       <div class='wechathint'>扫一扫添加我们微信</div>
     </div>
-    <div class=qq>QQ: 
+    <div class=qq>QQ:
       <a href="http://wpa.qq.com/msgrd?v=3&uin=1574143668&site=qq&menu=yes">
         1574143668
       </a>
     </div>
-    <div class=email>EMail: 
+    <div class=email>EMail:
       <a href="mailto:1574143668@qq.com">
         1574143668@qq.com
       </a>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-	name:'ContactUs'
+  name: 'ContactUs'
 }
 </script>
 
@@ -35,7 +35,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-} */
+}*/
 #ContactUs{
   margin-left: 20px;
 }

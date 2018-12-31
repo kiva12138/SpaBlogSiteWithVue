@@ -3,13 +3,15 @@
   <span class=newresline></span>
   <h3 class='newrestitle'>资源•最新</h3>
     <ul class='newresitems'>
-      <li v-for="newres_item in newresItems" class='newresitem'>
+      <li v-for="(newres_item, index) in newresItems"
+          class='newresitem'
+          v-bind:key='index'>
         <div class='newresitemcontent'>
           <h3 class='newresitemtitle'>
             {{newres_item.title}}
           </h3>
           <div class='newresitemformat'>
-            <span>文件格式:</span>{{newres_item.format}}
+            <span>文件格式: </span>{{newres_item.format}}
           </div>
           <div class='newresitemnum'>
             <span>下载数量</span>{{newres_item.num}}
@@ -25,82 +27,82 @@
 
 <script>
 export default {
-  name:'NewResource',
-  data(){
-    return{
-      newresItems:[
+  name: 'NewResource',
+  data () {
+    return {
+      newresItems: [
         {
-          title:'Title1',
-          format:'MP3',
-          url:'',
-          time:'2018-12-29',
-          num:256
+          title: 'Title1',
+          format: 'MP3',
+          url: '',
+          time: '2018-12-29',
+          num: 256
         },
         {
-          title:'Title2',
-          format:'RMVB',
-          url:'',
-          time:'2018-12-19',
-          num:256
+          title: 'Title2',
+          format: 'RMVB',
+          url: '',
+          time: '2018-12-19',
+          num: 256
         },
         {
-          title:'Title3',
-          format:'CPP',
-          url:'',
-          time:'2018-11-11',
-          num:256
+          title: 'Title3',
+          format: 'CPP',
+          url: '',
+          time: '2018-11-11',
+          num: 256
         },
         {
-          title:'Title4',
-          format:'MP3',
-          url:'',
-          time:'2018-12-1',
-          num:256
+          title: 'Title4',
+          format: 'MP3',
+          url: '',
+          time: '2018-12-1',
+          num: 256
         },
         {
-          title:'Title5',
-          format:'MP3',
-          url:'',
-          time:'2018-11-7',
-          num:256
+          title: 'Title5',
+          format: 'MP3',
+          url: '',
+          time: '2018-11-7',
+          num: 256
         },
         {
-          title:'Title6',
-          format:'MP3',
-          url:'',
-          time:'2018-11-7',
-          num:256
+          title: 'Title6',
+          format: 'MP3',
+          url: '',
+          time: '2018-11-7',
+          num: 256
         },
         {
-          title:'Title7',
-          format:'MP3',
-          url:'',
-          time:'2018-11-7',
-          num:256
+          title: 'Title7',
+          format: 'MP3',
+          url: '',
+          time: '2018-11-7',
+          num: 256
         },
         {
-          title:'Title8',
-          format:'MP3',
-          url:'',
-          time:'2018-11-7',
-          num:256
+          title: 'Title8',
+          format: 'MP3',
+          url: '',
+          time: '2018-11-7',
+          num: 256
         },
         {
-          title:'Title9',
-          format:'MP3',
-          url:'',
-          time:'2018-11-7',
-          num:256
+          title: 'Title9',
+          format: 'MP3',
+          url: '',
+          time: '2018-11-7',
+          num: 256
         }
       ]
-    } 
+    }
   }
 }
 </script>
 
 <style>
 .newresitems{
-  list-style-type:none;
+  list-style-type: none;
   padding-left: 10px;
   padding-right: 10px;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -109,7 +111,7 @@ export default {
   border: 1px solid;
   border-color: #F2F3F4;
 }
-.newresitem:hover{
+.newresitem: hover{
   background: #F2F3F4;
   cursor: pointer;
 }
@@ -119,7 +121,7 @@ export default {
 }
 .newresitemtitle{
   color: #7B7D7D;
-  padding-left: 10px; 
+  padding-left: 10px;
   padding-top: 0px;
   margin-top: 10px;
   width: 60%;

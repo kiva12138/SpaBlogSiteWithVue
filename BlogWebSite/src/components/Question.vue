@@ -19,13 +19,13 @@ import QuestionAnnounce from './QuestionModule/QuestionAnnounce.vue'
 import QuestionStar from './QuestionModule/QuestionStar.vue'
 import SearchQuestion from './QuestionModule/SearchQuestion.vue'
 export default {
-	name:'Question',
-  components:{
-    'hotlifequestions':HotLifeQuestion,
-    'hottechquestions':HotTechQuestion,
-    'questionannounce':QuestionAnnounce,
-    'questionstar':QuestionStar,
-    'searchquestion':SearchQuestion
+  name: 'Question',
+  components: {
+    'hotlifequestions': HotLifeQuestion,
+    'hottechquestions': HotTechQuestion,
+    'questionannounce': QuestionAnnounce,
+    'questionstar': QuestionStar,
+    'searchquestion': SearchQuestion
   }
 }
 </script>

@@ -23,14 +23,14 @@ import ResourceStar from './ResourceModule/ResourceStar.vue'
 import SearchResource from './ResourceModule/SearchSource.vue'
 import ContactUsAboutResource from './ResourceModule/ContactUsAboutResource.vue'
 export default {
-	name:'Resource',
-  components:{
-    'hotresource':HotResource,
-    'newresource':NewResource,
-    'resourceannounce':ResourceAnnounce,
-    'resourcestar':ResourceStar,
-    'searchresource':SearchResource,
-    'contactusaboutresource':ContactUsAboutResource
+  name: 'Resource',
+  components: {
+    'hotresource': HotResource,
+    'newresource': NewResource,
+    'resourceannounce': ResourceAnnounce,
+    'resourcestar': ResourceStar,
+    'searchresource': SearchResource,
+    'contactusaboutresource': ContactUsAboutResource
   }
 }
 </script>

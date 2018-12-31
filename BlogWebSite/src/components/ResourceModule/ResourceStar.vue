@@ -3,10 +3,11 @@
     <span class='resstarline'></span>
     <h3 class='resstartitle'>分享明星</h3>
     <ul class='resstaritems'>
-      <li v-for="resstaritem in resStarItems"
+      <li v-for="(resstaritem, index) in resStarItems"
+          v-bind:key='index'
           class='resstaritem'>
         <div class='resstaritempic'>
-          <img v-bind:src="resstaritem.headurl" 
+          <img v-bind:src="resstaritem.headurl"
                 v-bind:alt="resstaritem.name+'的头像'"
                 height='80px'/>
         </div>
@@ -23,42 +24,42 @@
 
 <script>
 export default {
-	name:'ResourceStar',
-  data(){
-      return{
-        resStarItems:[
-          {
-            name:'Name1',
-            sharenum:20,
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name2',
-            sharenum:20,
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name3',
-            sharenum:20,
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name4',
-            sharenum:20,
-            url:'',
-            headurl:require('./../../assets/head.png')
-          },
-          {
-            name:'Name5',
-            sharenum:20,
-            url:'',
-            headurl:require('./../../assets/head.png')
-          }
-        ]
-      }
+  name: 'ResourceStar',
+  data () {
+    return {
+      resStarItems: [
+        {
+          name: 'Name1',
+          sharenum: 20,
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name2',
+          sharenum: 20,
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name3',
+          sharenum: 20,
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name4',
+          sharenum: 20,
+          url: '',
+          headurl: require('./../../assets/head.png')
+        },
+        {
+          name: 'Name5',
+          sharenum: 20,
+          url: '',
+          headurl: require('./../../assets/head.png')
+        }
+      ]
+    }
   }
 }
 </script>
@@ -116,5 +117,5 @@ export default {
 .resstaritemnum{
   color: #626567;
   margin: 10px;
-} 
+}
 </style>

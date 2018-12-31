@@ -3,7 +3,9 @@
   <span class=lifequesline></span>
   <h3 class='lifequestitle'>热点•生活区</h3>
     <ul class='hotlifeitems'>
-      <li v-for="hotlife_item in hotlifeItems" class='hotlifeitem'>
+      <li v-for="(hotlife_item, index) in hotlifeItems"
+          class='hotlifeitem'
+          v-bind:key='index'>
         <div class='hotlifeitemcontent'>
           <h3 class='hotlifeitemtitle'>
             {{hotlife_item.title}}
@@ -25,47 +27,47 @@
 
 <script>
 export default {
-	name:'HotLifeQuestion',
-  data(){
-    return{
-      hotlifeItems:[
+  name: 'HotLifeQuestion',
+  data () {
+    return {
+      hotlifeItems: [
         {
-          title:'Title1',
-          headline:'Headline1',
-          url:'',
-          time:'2018-12-29',
-          heat:256
+          title: 'Title1',
+          headline: 'Headline1',
+          url: '',
+          time: '2018-12-29',
+          heat: 256
         },
         {
-          title:'Title2',
-          headline:'Headline2',
-          url:'',
-          time:'2018-12-19',
-          heat:239
+          title: 'Title2',
+          headline: 'Headline2',
+          url: '',
+          time: '2018-12-19',
+          heat: 239
         },
         {
-          title:'Title3',
-          headline:'Headline3',
-          url:'',
-          time:'2018-11-11',
-          heat:98
+          title: 'Title3',
+          headline: 'Headline3',
+          url: '',
+          time: '2018-11-11',
+          heat: 98
         },
         {
-          title:'Title4',
-          headline:'Headline4',
-          url:'',
-          time:'2018-12-1',
-          heat:267
+          title: 'Title4',
+          headline: 'Headline4',
+          url: '',
+          time: '2018-12-1',
+          heat: 267
         },
         {
-          title:'Title5',
-          headline:'Headline5',
-          url:'',
-          time:'2018-11-7',
-          heat:132
+          title: 'Title5',
+          headline: 'Headline5',
+          url: '',
+          time: '2018-11-7',
+          heat: 132
         }
       ]
-    } 
+    }
   }
 }
 </script>

@@ -3,10 +3,11 @@
     <span class=line></span>
     <h3 class='todaytitle'>今日推荐</h3>
     <ul class='todayitems'>
-      <li v-for="todayitem in todayItems"
-          class='todayitem'>
+      <li v-for="(todayitem, index) in todayItems"
+          class='todayitem'
+          v-bind:key='index'>
         <div class='todayitempic'>
-          <img src="./../../assets/vuelogo.png" 
+          <img src="./../../assets/vuelogo.png"
                 v-bind:alt="todayitem.title"
                 height='80px'/>
         </div>
@@ -18,62 +19,62 @@
 
 <script>
 export default {
-	name:'TodayRecommand',
-  data(){
-      return{
-        todayItems:[
-          {
-            title:'This is Title1',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title2',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title3',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title4',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title5',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title6',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title7',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title8',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title9',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          },
-          {
-            title:'This is Title10',
-            url:'',
-            picurl:'./../../assets/vuelogo.png'
-          }
-        ]
-      }
+  name: 'TodayRecommand',
+  data () {
+    return {
+      todayItems: [
+        {
+          title: 'This is Title1',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title2',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title3',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title4',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title5',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title6',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title7',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title8',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title9',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        },
+        {
+          title: 'This is Title10',
+          url: '',
+          picurl: './../../assets/vuelogo.png'
+        }
+      ]
+    }
   }
 }
 </script>

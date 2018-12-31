@@ -14,54 +14,54 @@ let router = new Router({
       path: '/',
       name: 'Recommand',
       component: Recommand,
-      meta:{
-        title:'HB博客论坛社区'
+      meta: {
+        title: 'HB博客论坛社区'
       }
     },
     {
       path: '/recommand',
       name: 'Recommand',
       component: Recommand,
-      meta:{
-        title:'HB博客论坛社区'
+      meta: {
+        title: 'HB博客论坛社区'
       }
     },
     {
       path: '/blog',
       name: 'Blog',
       component: Blog,
-      meta:{
-        title:'HB博客区'
+      meta: {
+        title: 'HB博客区'
       }
     },
     {
       path: '/question',
       name: 'Question',
       component: Question,
-      meta:{
-        title:'HB论坛区'
+      meta: {
+        title: 'HB论坛区'
       }
     },
     {
       path: '/resource',
       name: 'Resource',
       component: Resource,
-      meta:{
-        title:'HB资源区'
+      meta: {
+        title: 'HB资源区'
       }
     },
     {
       path: '/person',
       name: 'Person',
       component: Person,
-      meta:{
-        title:'个人资料'
+      meta: {
+        title: '个人中心'
       }
     }
   ]
 })
 
-export default router 
+export default router
 router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title
@@ -69,4 +69,4 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
-router.afterEach((to,from)=>{ })
+router.afterEach((to, from) => {})

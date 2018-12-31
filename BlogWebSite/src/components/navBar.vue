@@ -60,7 +60,7 @@ export default{
   },
   methods: {
     changeActiveItem (item) {
-      //this.currentActiveItem_Computed = item.url
+      this.currentActiveItem_Computed = item.url
       this.$router.push({
         'path': item.url
         /*

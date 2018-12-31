@@ -12,7 +12,7 @@ let router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Recommand',
+      name: 'Default',
       component: Recommand,
       meta: {
         title: 'HB博客论坛社区'

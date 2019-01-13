@@ -36,6 +36,7 @@ export default {
   margin: 0;
   padding: 0;
   margin-top: 50px;
+  overflow-x: hidden;
 }
 .leftblogrecommand{
   height: 100%;

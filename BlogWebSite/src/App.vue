@@ -6,14 +6,21 @@
     <div class='appcontent'>
       <router-view/>
     </div>
+    <div class='appfooter'>
+      <appfooter/>
+    </div>
   </div>
 </template>
 
 <script>
 import navbar from './components/navBar.vue'
+import footer from './components/Footer.vue'
 export default {
   name: 'App',
-  components: {'navbar': navbar}
+  components: {
+    'navbar': navbar,
+    'appfooter': footer
+  }
 }
 </script>
 
@@ -29,5 +36,9 @@ export default {
   .appcontent{
     width: 100%;
     overflow-x: auto;
+  }
+  .appfooter{
+    margin-top: 60px;
+    width: 100%;
   }
 </style>

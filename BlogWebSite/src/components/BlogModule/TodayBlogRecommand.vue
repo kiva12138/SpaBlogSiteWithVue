@@ -5,7 +5,8 @@
     <ul class='todayblogitems'>
       <li v-for="(todayblogitem, index) in todayBlogItems"
           class='todayblogitem'
-          v-bind:key='index'>
+          v-bind:key='index'
+          v-on:click='handleBlogClicked(todayblogitem.url)'>
         <div class='todayblogitempic'>
           <img src="./../../assets/vuelogo.png"
                 v-bind:alt="todayblogitem.title"
@@ -25,30 +26,37 @@ export default {
       todayBlogItems: [
         {
           title: 'This is Title1',
-          url: '',
+          url: '2334',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title2',
-          url: '',
+          url: '2334',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title3',
-          url: '',
+          url: '2334',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title4',
-          url: '',
+          url: '2334',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title5',
-          url: '',
+          url: '2334',
           picurl: './../../assets/vuelogo.png'
         }
       ]
+    }
+  },
+  methods: {
+    handleBlogClicked: function (url) {
+      this.$router.push({
+        path: '/blog/article/' + url
+      })
     }
   }
 }

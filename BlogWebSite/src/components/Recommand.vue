@@ -15,7 +15,7 @@
 import PicRecommand from './RecommandModule/PicRecommand.vue'
 import MainRecommand from './RecommandModule/MainRecommand.vue'
 import TodayRecommand from './RecommandModule/TodayRecommand.vue'
-import ContactUs from './RecommandModule/ContactUs.vue'
+import ContactUs from './ContactUs/ContactUs.vue'
 export default {
   name: 'Recommand',
   components: {

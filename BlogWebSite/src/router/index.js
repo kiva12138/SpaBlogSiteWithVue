@@ -6,6 +6,7 @@ import Blog from '@/components/Blog'
 import Question from '@/components/Question'
 import Resource from '@/components/Resource'
 import Person from '@/components/Person'
+import BlogPage from '@/components/BlogPage/BlogPage'
 
 Vue.use(Router)
 
@@ -41,6 +42,14 @@ let router = new Router({
       component: Blog,
       meta: {
         title: 'HB博客区'
+      }
+    },
+    {
+      path: '/blog/article/:id',
+      name: 'Article',
+      component: BlogPage,
+      meta: {
+        title: 'Title'
       }
     },
     {

@@ -3,7 +3,8 @@
     <ul class='mainblogitems'>
       <li v-for="(main_blog_item, index) in mainBlogItems"
           class='mainblogitem'
-          v-bind:key='index'>
+          v-bind:key='index'
+          v-on:click='handleBlogClicked(main_blog_item.url)'>
         <div class='blogitemcontent'>
           <h3 class='blogitemtitle'>
             {{main_blog_item.title}}
@@ -32,74 +33,81 @@ export default {
         {
           title: 'Title1',
           headline: 'Headline1',
-          url: '',
+          url: '2334',
           time: '2018-12-29',
           read: 256
         },
         {
           title: 'Title2',
           headline: 'Headline2',
-          url: '',
+          url: '2334',
           time: '2018-12-19',
           read: 239
         },
         {
           title: 'Title3',
           headline: 'Headline3',
-          url: '',
+          url: '2334',
           time: '2018-11-11',
           read: 98
         },
         {
           title: 'Title4',
           headline: 'Headline4',
-          url: '',
+          url: '2334',
           time: '2018-12-1',
           read: 267
         },
         {
           title: 'Title5',
           headline: 'Headline5',
-          url: '',
+          url: '2334',
           time: '2018-11-7',
           read: 132
         },
         {
           title: 'Title6',
           headline: 'Headline6',
-          url: '',
+          url: '2334',
           time: '2018-10-9',
           read: 217
         },
         {
           title: 'Title7',
           headline: 'Headline7',
-          url: '',
+          url: '2334',
           time: '2018-10-26',
           read: 24
         },
         {
           title: 'Title8',
           headline: 'Headline8',
-          url: '',
+          url: '2334',
           time: '2018-10-3',
           read: 85
         },
         {
           title: 'Title9',
           headline: 'Headline9',
-          url: '',
+          url: '2334',
           time: '2018-10-4',
           read: 56
         },
         {
           title: 'Title10',
           headline: 'Headline10',
-          url: '',
+          url: '2334',
           time: '2018-11-2',
           read: 26
         }
       ]
+    }
+  },
+  methods: {
+    handleBlogClicked: function (url) {
+      this.$router.push({
+        path: '/blog/article/' + url
+      })
     }
   }
 }

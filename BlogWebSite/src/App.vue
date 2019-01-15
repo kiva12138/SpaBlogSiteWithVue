@@ -20,6 +20,12 @@ export default {
   components: {
     'navbar': navbar,
     'appfooter': footer
+  },
+  watch: {
+    '$route' (to, from) {
+      // 在这里对不符合要求的文章与请求进行过滤
+      // to.params.id
+    }
   }
 }
 </script>

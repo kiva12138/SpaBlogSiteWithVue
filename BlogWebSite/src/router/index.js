@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import NotFound from '@/components/NotFound'
 import Recommand from '@/components/Recommand'
 import Blog from '@/components/Blog'
 import Question from '@/components/Question'
@@ -10,6 +11,14 @@ Vue.use(Router)
 
 let router = new Router({
   routes: [
+    {
+      path: '*',
+      name: 'NotFound',
+      component: NotFound,
+      meta: {
+        title: '页面不见了QWQ'
+      }
+    },
     {
       path: '/',
       name: 'Default',

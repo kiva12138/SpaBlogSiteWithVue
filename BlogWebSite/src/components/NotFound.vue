@@ -12,7 +12,7 @@ export default{
   name: 'NotFound',
   methods: {
     handleBackToHome: function () {
-      this.$router.push('recommand')
+      this.$router.push({'path': '/recommand'})
     }
   }
 }

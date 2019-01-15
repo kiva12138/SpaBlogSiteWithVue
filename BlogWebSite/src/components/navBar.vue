@@ -20,23 +20,23 @@ export default{
       menu_items: [
         {
           name: '推荐',
-          url: 'recommand'
+          url: '/recommand'
         },
         {
           name: '博客',
-          url: 'blog'
+          url: '/blog'
         },
         {
           name: '论坛',
-          url: 'question'
+          url: '/question'
         },
         {
           name: '资源',
-          url: 'resource'
+          url: '/resource'
         },
         {
           name: '个人中心',
-          url: 'person'
+          url: '/person'
         }
       ],
       currentItemActive: '',
@@ -47,9 +47,11 @@ export default{
   computed: {
     currentActiveItem_Computed: {
       get: function () {
-        this.currentItemActive = window.location.hash.substr(2)
+        this.currentItemActive = window.location.hash.split('/')[1]
         if (this.currentItemActive === '') {
-          this.currentItemActive = 'recommand'
+          this.currentItemActive = '/recommand'
+        } else {
+          this.currentItemActive = '/'.concat(this.currentItemActive)
         }
         return this.currentItemActive
       },

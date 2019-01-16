@@ -5,7 +5,8 @@
     <ul class='hottechitems'>
       <li v-for="(hottech_item, index) in hottechItems"
           class='hottechitem'
-          v-bind:key='index'>
+          v-bind:key='index'
+          v-on:click='handleQuestionClicked(hottech_item.url)'>
         <div class='hottechitemcontent'>
           <h3 class='hottechitemtitle'>
             {{hottech_item.title}}
@@ -34,39 +35,46 @@ export default {
         {
           title: 'Title1',
           headline: 'Headline1',
-          url: '',
+          url: '4343',
           time: '2018-12-29',
           heat: 256
         },
         {
           title: 'Title2',
           headline: 'Headline2',
-          url: '',
+          url: '54352',
           time: '2018-12-19',
           heat: 239
         },
         {
           title: 'Title3',
           headline: 'Headline3',
-          url: '',
+          url: '432432',
           time: '2018-11-11',
           heat: 98
         },
         {
           title: 'Title4',
           headline: 'Headline4',
-          url: '',
+          url: '4323',
           time: '2018-12-1',
           heat: 267
         },
         {
           title: 'Title5',
           headline: 'Headline5',
-          url: '',
+          url: '234',
           time: '2018-11-7',
           heat: 132
         }
       ]
+    }
+  },
+  methods: {
+    handleQuestionClicked: function (url) {
+      this.$router.push({
+        path: '/question/article/' + url
+      })
     }
   }
 }

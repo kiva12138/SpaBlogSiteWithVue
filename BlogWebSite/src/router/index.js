@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import NotFound from '@/components/NotFound'
 import Recommand from '@/components/Recommand'
 import Blog from '@/components/Blog'
 import Question from '@/components/Question'
 import Resource from '@/components/Resource'
 import Person from '@/components/Person'
+
 import BlogPage from '@/components/BlogPage/BlogPage'
+import QuestionPage from '@/components/QuestionPage/QuestionPage'
 
 Vue.use(Router)
 
@@ -46,10 +49,10 @@ let router = new Router({
     },
     {
       path: '/blog/article/:id',
-      name: 'Article',
+      name: 'BlogArticle',
       component: BlogPage,
       meta: {
-        title: 'Title'
+        title: 'BlogTitle'
       }
     },
     {
@@ -58,6 +61,14 @@ let router = new Router({
       component: Question,
       meta: {
         title: 'HB论坛区'
+      }
+    },
+    {
+      path: '/question/article/:id',
+      name: 'QuestionArticle',
+      component: QuestionPage,
+      meta: {
+        title: 'QuestionTitle'
       }
     },
     {

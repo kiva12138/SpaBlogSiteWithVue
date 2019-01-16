@@ -37,6 +37,11 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   display: inline-block;
 }
+.line{
+  padding-left: 10px;
+  margin-left: 30px;
+  background: #2E86C1;
+}
 .wechat{
   margin: 10px;
   text-align:center;

@@ -5,7 +5,8 @@
     <ul class='todayitems'>
       <li v-for="(todayitem, index) in todayItems"
           class='todayitem'
-          v-bind:key='index'>
+          v-bind:key='index'
+          v-on:click='handleBlogClicked(todayitem.url)'>
         <div class='todayitempic'>
           <img src="./../../assets/vuelogo.png"
                 v-bind:alt="todayitem.title"
@@ -25,55 +26,62 @@ export default {
       todayItems: [
         {
           title: 'This is Title1',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title2',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title3',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title4',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title5',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title6',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title7',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title8',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title9',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         },
         {
           title: 'This is Title10',
-          url: '',
+          url: '654',
           picurl: './../../assets/vuelogo.png'
         }
       ]
+    }
+  },
+  methods: {
+    handleBlogClicked: function (url) {
+      this.$router.push({
+        path: '/blog/article/' + url
+      })
     }
   }
 }

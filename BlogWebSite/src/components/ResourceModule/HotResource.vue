@@ -5,7 +5,8 @@
     <ul class='hotresitems'>
       <li v-for="(hotres_item, index) in hotresItems"
           class='hotresitem'
-          v-bind:key='index'>
+          v-bind:key='index'
+          v-on:click='handleResClicked(hotres_item.url)'>
         <div class='hotresitemcontent'>
           <h3 class='hotresitemtitle'>
             {{hotres_item.title}}
@@ -34,53 +35,60 @@ export default {
         {
           title: 'Title1',
           format: 'MP3',
-          url: '',
+          url: '32',
           time: '2018-12-29',
           num: 256
         },
         {
           title: 'Title2',
           format: 'RMVB',
-          url: '',
+          url: '32132',
           time: '2018-12-19',
           num: 256
         },
         {
           title: 'Title3',
           format: 'CPP',
-          url: '',
+          url: '4324',
           time: '2018-11-11',
           num: 256
         },
         {
           title: 'Title4',
           format: 'MP3',
-          url: '',
+          url: '423',
           time: '2018-12-1',
           num: 256
         },
         {
           title: 'Title5',
           format: 'MP3',
-          url: '',
+          url: '123',
           time: '2018-11-7',
           num: 256
         },
         {
           title: 'Title6',
           format: 'MP3',
-          url: '',
+          url: '432',
           time: '2018-11-7',
           num: 256
         },
         {
           title: 'Title7',
           format: 'MP3',
-          url: '',
+          url: '54',
           time: '2018-11-7',
           num: 256
         }
       ]
+    }
+  },
+  methods: {
+    handleResClicked: function (url) {
+      this.$router.push({
+        path: '/resource/article/' + url
+      })
     }
   }
 }

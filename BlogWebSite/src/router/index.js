@@ -10,6 +10,7 @@ import Person from '@/components/Person'
 
 import BlogPage from '@/components/BlogPage/BlogPage'
 import QuestionPage from '@/components/QuestionPage/QuestionPage'
+import ResourcePage from '@/components/ResourcePage/ResourcePage'
 
 Vue.use(Router)
 
@@ -77,6 +78,14 @@ let router = new Router({
       component: Resource,
       meta: {
         title: 'HB资源区'
+      }
+    },
+    {
+      path: '/resource/article/:id',
+      name: 'ResourceArticle',
+      component: ResourcePage,
+      meta: {
+        title: 'ResourceTitle'
       }
     },
     {

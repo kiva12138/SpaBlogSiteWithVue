@@ -30,8 +30,9 @@
           <div class='anscontent'>
             <div v-html='quesansitem.content' class='quesText'/>
               <div class='otherinfo'>
+              <div class='ansname'>{{quesansitem.username}}</div>
               <div class='quesindex'>第{{index+2}}楼</div>
-              <div class='questime'>回答时间：{{quesTime}}</div>
+              <div class='questime'>回答时间：{{quesansitem.time}}</div>
             </div>
           </div>
         </li>
@@ -209,6 +210,9 @@ export default {
   width: 15%;
   display: inline-block;
   vertical-align: top;
+}
+.ansname{
+  line-height: 150%;
 }
 .anscontent{
   width: 84%;

@@ -11,6 +11,9 @@ import Person from '@/components/Person'
 import BlogPage from '@/components/BlogPage/BlogPage'
 import QuestionPage from '@/components/QuestionPage/QuestionPage'
 import ResourcePage from '@/components/ResourcePage/ResourcePage'
+import PersonPage from '@/components/PersonPage/PersonalPage'
+
+import BlogSearchPage from '@/components/BlogSearchPage/BlogSearchPage'
 
 Vue.use(Router)
 
@@ -57,6 +60,14 @@ let router = new Router({
       }
     },
     {
+      path: '/blog/search/:keywords',
+      name: 'BlogSearch',
+      component: BlogSearchPage,
+      meta: {
+        title: 'BlogSearch'
+      }
+    },
+    {
       path: '/question',
       name: 'Question',
       component: Question,
@@ -94,6 +105,14 @@ let router = new Router({
       component: Person,
       meta: {
         title: '个人中心'
+      }
+    },
+    {
+      path: '/person/detail/:id',
+      name: 'PersonDetail',
+      component: PersonPage,
+      meta: {
+        title: 'PersonTitle'
       }
     }
   ]

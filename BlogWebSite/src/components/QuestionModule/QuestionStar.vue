@@ -1,11 +1,12 @@
 <template>
   <div id="QuestionStar">
     <span class='quesline'></span>
-    <h3 class='quesstartitle'>博客达人</h3>
+    <h3 class='quesstartitle'>论坛达人</h3>
     <ul class='quesstaritems'>
       <li v-for="(quesstaritem, index) in quesStarItems"
           class='quesstaritem'
-          v-bind:key='index'>
+          v-bind:key='index'
+          v-on:click='handlePersonClicked(quesstaritem.url)'>
         <div class='quesstaritempic'>
           <img v-bind:src="quesstaritem.headurl"
                 v-bind:alt="quesstaritem.name+'的头像'"
@@ -31,34 +32,41 @@ export default {
         {
           name: 'Name1',
           description: 'Description1',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name2',
           description: 'Description2',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name3',
           description: 'Description3',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name4',
           description: ' Description4',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name5',
           description: 'Description5',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         }
       ]
+    }
+  },
+  methods: {
+    handlePersonClicked: function (url) {
+      this.$router.push({
+        path: '/person/detail/' + url
+      })
     }
   }
 }

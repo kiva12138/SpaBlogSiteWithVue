@@ -5,7 +5,8 @@
     <ul class='staritems'>
       <li v-for="(staritem, index) in starItems"
           class='staritem'
-          v-bind:key='index'>
+          v-bind:key='index'
+          v-on:click='handlePersonClicked(staritem.url)'>
         <div class='staritempic'>
           <img v-bind:src="staritem.headurl"
                 v-bind:alt="staritem.name+'的头像'"
@@ -29,34 +30,41 @@ export default {
         {
           name: 'Name1',
           description: 'Description1',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name2',
           description: 'Description2',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name3',
           description: 'Description3',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name4',
           description: 'Description4',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name5',
           description: 'Description5',
-          url: '',
+          url: '222',
           headurl: require('./../../assets/head.png')
         }
       ]
+    }
+  },
+  methods: {
+    handlePersonClicked: function (url) {
+      this.$router.push({
+        path: '/person/detail/' + url
+      })
     }
   }
 }

@@ -1,18 +1,16 @@
 <template>
   <div id="PersonRes">
     <span class='personresline'></span>
-    <h3 class='personrestitle'>已上传资源</h3>
+    <h3 class='personrestitle'>该用户上传的资源</h3>
     <div class='personres'>
-      <el-table :data="displayedres" stripe style="width: 98%" class='personrestbl'>
-          <el-table-column prop="title" label="资源名称" width="200"></el-table-column>
+      <el-table :data="displayedres" stripe style="width: 83%" class='personrestbl'>
+          <el-table-column prop="title" label="资源名称" width="350"></el-table-column>
           <el-table-column prop="title" label="资源格式" width="100"></el-table-column>
-          <el-table-column prop="time" label="上传日期" width="100"></el-table-column>
+          <el-table-column prop="time" label="上传日期" width="150"></el-table-column>
           <el-table-column prop="download" label="下载量" width="100"></el-table-column>
           <el-table-column label="操作" width="150">
             <template slot-scope="scope">
               <el-button type="text" size="small">查看</el-button>
-              <el-button type="text" size="small">编辑</el-button>
-              <el-button type="text" size="small">删除</el-button>
             </template>
         </el-table-column>
       </el-table>
@@ -135,6 +133,7 @@ export default {
 <style>
 #PersonRes{
   margin-top: 20px;
+  margin-left: 20px;
 }
 .personresline{
   padding-left: 10px;
@@ -151,6 +150,6 @@ export default {
   text-align: center;
 }
 .personrestbl{
-  margin-left: 60px;
+  margin-left: 80px;
 }
 </style>

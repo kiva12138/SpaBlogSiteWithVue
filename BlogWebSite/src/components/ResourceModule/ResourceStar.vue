@@ -5,7 +5,8 @@
     <ul class='resstaritems'>
       <li v-for="(resstaritem, index) in resStarItems"
           v-bind:key='index'
-          class='resstaritem'>
+          class='resstaritem'
+          v-on:click='handlePersonClicked(resstaritem.url)'>
         <div class='resstaritempic'>
           <img v-bind:src="resstaritem.headurl"
                 v-bind:alt="resstaritem.name+'的头像'"
@@ -31,34 +32,41 @@ export default {
         {
           name: 'Name1',
           sharenum: 20,
-          url: '',
+          url: '321',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name2',
           sharenum: 20,
-          url: '',
+          url: '321',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name3',
           sharenum: 20,
-          url: '',
+          url: '321',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name4',
           sharenum: 20,
-          url: '',
+          url: '12',
           headurl: require('./../../assets/head.png')
         },
         {
           name: 'Name5',
           sharenum: 20,
-          url: '',
+          url: '321',
           headurl: require('./../../assets/head.png')
         }
       ]
+    }
+  },
+  methods: {
+    handlePersonClicked: function (url) {
+      this.$router.push({
+        path: '/person/detail/' + url
+      })
     }
   }
 }

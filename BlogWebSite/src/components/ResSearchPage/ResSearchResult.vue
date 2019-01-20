@@ -189,7 +189,9 @@ export default {
 }
 .resop{
   text-align: right;
-  width: 19%;
+  width: 15%;
+  margin: 0;
+  display: inline-block;
 }
 .downbutton{
   display: inline-block;

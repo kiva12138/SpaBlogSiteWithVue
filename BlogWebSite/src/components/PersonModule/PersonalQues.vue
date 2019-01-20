@@ -32,70 +32,13 @@ export default {
     return {
       numOfOnePage: 5,
       currentPage: 1,
-      totalPageNum: 10,
-      publishedques: [
-        {
-          title: 'Title1',
-          url: '',
-          time: '2018-12-29',
-          ans: 256
-        },
-        {
-          title: 'Title2',
-          url: '',
-          time: '2018-12-19',
-          ans: 239
-        },
-        {
-          title: 'Title3',
-          url: '',
-          time: '2018-11-11',
-          ans: 98
-        },
-        {
-          title: 'Title4',
-          url: '',
-          time: '2018-12-1',
-          ans: 267
-        },
-        {
-          title: 'Title5',
-          url: '',
-          time: '2018-11-7',
-          ans: 132
-        },
-        {
-          title: 'Title6',
-          url: '',
-          time: '2018-10-9',
-          ans: 217
-        },
-        {
-          title: 'Title7',
-          url: '',
-          time: '2018-10-26',
-          ans: 24
-        },
-        {
-          title: 'Title8',
-          url: '',
-          time: '2018-10-3',
-          ans: 85
-        },
-        {
-          title: 'Title9',
-          url: '',
-          time: '2018-10-4',
-          ans: 56
-        },
-        {
-          title: 'Title10',
-          url: '',
-          time: '2018-11-2',
-          ans: 26
-        }
-      ]
+      totalPageNum: null,
+      publishedques: null
     }
+  },
+  created () {
+    this.publishedques = JSON.parse(this.$cookie.get('userques'))
+    this.totalPageNum = this.publishedques.length
   },
   methods: {
     pageChanged (val) {

@@ -5,7 +5,7 @@
     <div class='personopmain'>
       <el-button type="primary">修改资料</el-button>
       <el-button type="primary">修改密码</el-button>
-      <el-button type="primary">退出登录</el-button>
+      <el-button type="primary" v-on:click='logout'>退出登录</el-button>
     </div>
   </div>
 </template>
@@ -15,6 +15,22 @@ export default {
   name: 'AccountOperation',
   data () {
     return {
+    }
+  },
+  methods: {
+    logout: function () {
+      this.$session.destroy()
+      this.$cookie.delete('username')
+      this.$cookie.delete('phone')
+      this.$cookie.delete('regtime')
+      this.$cookie.delete('numofblog')
+      this.$cookie.delete('numofques')
+      this.$cookie.delete('numofres')
+      this.$cookie.delete('birth')
+      this.$cookie.delete('userblogs')
+      this.$cookie.delete('userques')
+      this.$cookie.delete('userres')
+      this.$router.push('/login')
     }
   }
 }

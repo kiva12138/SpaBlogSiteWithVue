@@ -17,6 +17,8 @@ import BlogSearchPage from '@/components/BlogSearchPage/BlogSearchPage'
 import QuesSearchPage from '@/components/QuesSearchPage/QuesSearchPage'
 import ResSearchPage from '@/components/ResSearchPage/ResSearchPage'
 
+import Login from '@/components/LoginModule/Login'
+
 Vue.use(Router)
 
 let router = new Router({
@@ -131,6 +133,14 @@ let router = new Router({
       component: PersonPage,
       meta: {
         title: 'PersonTitle'
+      }
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+      meta: {
+        title: '登录'
       }
     }
   ]

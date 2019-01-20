@@ -1,7 +1,7 @@
 <template>
   <div id="persondetail">
     <span class='persondetailline'></span>
-    <h3 class='persondetailtitle'>用户信息</h3>
+    <h3 class='persondetailtitle'>您的用户信息</h3>
     <div class='mainpersondetail'>
       <img v-bind:src="personalHead"
             v-bind:alt="personalName+'的头像'"
@@ -30,14 +30,23 @@ export default {
   data () {
     return {
       personalHead: require('./../../assets/head.png'),
-      personalName: '用户名',
-      personalRegTime: '2018-12-30',
-      personalPhone: '17863107076',
-      birthDate: '1998-10-20',
-      numOfBlogs: 23,
-      numOfQues: 34,
-      numOfRes: 20
+      personalName: null,
+      personalRegTime: null,
+      personalPhone: null,
+      birthDate: null,
+      numOfBlogs: null,
+      numOfQues: null,
+      numOfRes: null
     }
+  },
+  created: function () {
+    this.personalName = this.$cookie.get('username')
+    this.personalRegTime = this.$cookie.get('regtime')
+    this.personalPhone = this.$cookie.get('phone')
+    this.birthDate = this.$cookie.get('birth')
+    this.numOfBlogs = this.$cookie.get('numofblog')
+    this.numOfQues = this.$cookie.get('numofques')
+    this.numOfRes = this.$cookie.get('numofres')
   }
 }
 </script>

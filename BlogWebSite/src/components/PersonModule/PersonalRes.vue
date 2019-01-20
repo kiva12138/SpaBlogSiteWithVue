@@ -34,90 +34,13 @@ export default {
     return {
       numOfOnePage: 5,
       currentPage: 1,
-      totalPageNum: 10,
-      publishedres: [
-        {
-          title: 'Title1',
-          headline: 'Headline1',
-          url: '',
-          time: '2018-12-29',
-          download: 256,
-          comment: 9
-        },
-        {
-          title: 'Title2',
-          headline: 'Headline2',
-          url: '',
-          time: '2018-12-19',
-          download: 239,
-          comment: 9
-        },
-        {
-          title: 'Title3',
-          headline: 'Headline3',
-          url: '',
-          time: '2018-11-11',
-          download: 98,
-          comment: 9
-        },
-        {
-          title: 'Title4',
-          headline: 'Headline4',
-          url: '',
-          time: '2018-12-1',
-          download: 267,
-          comment: 9
-        },
-        {
-          title: 'Title5',
-          headline: 'Headline5',
-          url: '',
-          time: '2018-11-7',
-          download: 132,
-          comment: 9
-        },
-        {
-          title: 'Title6',
-          headline: 'Headline6',
-          url: '',
-          time: '2018-10-9',
-          download: 217,
-          comment: 9
-        },
-        {
-          title: 'Title7',
-          headline: 'Headline7',
-          url: '',
-          time: '2018-10-26',
-          download: 24,
-          comment: 9
-        },
-        {
-          title: 'Title8',
-          headline: 'Headline8',
-          url: '',
-          time: '2018-10-3',
-          download: 85,
-          comment: 9
-        },
-        {
-          title: 'Title9',
-          headline: 'Headline9',
-          url: '',
-          time: '2018-10-4',
-          download: 56,
-          comment: 9
-        },
-        {
-          title: 'Title10',
-          headline: 'Headline10',
-          url: '',
-          time: '2018-11-2',
-          download: 26,
-          comment: 9
-        }
-      ]
+      totalPageNum: null,
+      publishedres: null
     }
+  },
+  created () {
+    this.publishedres = JSON.parse(this.$cookie.get('userres'))
+    this.totalPageNum = this.publishedres.length
   },
   methods: {
     pageChanged (val) {

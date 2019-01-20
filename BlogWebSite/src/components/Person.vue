@@ -32,6 +32,14 @@ export default {
     'personaldetail': PersonalDetail,
     'personalques': PersonalQues,
     'personalres': PersonalRes
+  },
+  beforeCreate () {
+    if (!this.$session.exists()) {
+      this.$router.push('/login')
+    }
+    if (!(this.$cookie.get('login') === '1')) {
+      this.$router.push('/login')
+    }
   }
 }
 </script>

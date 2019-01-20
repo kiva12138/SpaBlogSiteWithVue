@@ -6,7 +6,8 @@
               class='searchinput'/>
     <el-button type="primary"
                icon="el-icon-search"
-               class="searchbutton">
+               class="searchbutton"
+               v-on:click='handleBlogSearch'>
               搜索
     </el-button>
   </div>
@@ -18,6 +19,13 @@ export default {
   data () {
     return {
       searchContent: ''
+    }
+  },
+  methods: {
+    handleBlogSearch: function () {
+      this.$router.push({
+        path: '/blog/search/' + this.searchContent
+      })
     }
   }
 }

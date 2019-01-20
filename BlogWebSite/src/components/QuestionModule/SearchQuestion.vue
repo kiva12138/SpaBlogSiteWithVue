@@ -6,7 +6,8 @@
               class='searchquesinput'/>
     <el-button type="primary"
                icon="el-icon-search"
-               class="searchquesbutton">
+               class="searchquesbutton"
+               v-on:click='handleQuesClicked'>
               搜索
     </el-button>
   </div>
@@ -18,6 +19,13 @@ export default {
   data () {
     return {
       searchContent: ''
+    }
+  },
+  methods: {
+    handleQuesClicked: function () {
+      this.$router.push({
+        path: '/question/search/' + this.searchContent
+      })
     }
   }
 }

@@ -6,7 +6,8 @@
               class='searchresinput'/>
     <el-button type="primary"
                icon="el-icon-search"
-               class="searchresbutton">
+               class="searchresbutton"
+               v-on:click='handleResSearch'>
               搜索
     </el-button>
   </div>
@@ -18,6 +19,13 @@ export default {
   data () {
     return {
       searchContent: ''
+    }
+  },
+  methods: {
+    handleResSearch: function () {
+      this.$router.push({
+        path: '/resource/search/' + this.searchContent
+      })
     }
   }
 }

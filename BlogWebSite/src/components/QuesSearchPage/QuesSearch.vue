@@ -1,13 +1,13 @@
 <template>
-  <div id="BlogSearch">
+  <div id="QuesSearch">
     <el-input v-bind:placeholder="this.$route.params.keywords"
               v-model="searchContent"
               clearable
-              class='blogsearchinput'/>
+              class='quessearchinput'/>
     <el-button type="primary"
                icon="el-icon-search"
-               class="blogsearchbutton"
-               v-on:click='handleBlogSearch'>
+               class="quessearchbutton"
+               v-on:click='handleQuesSearch'>
               搜索
     </el-button>
   </div>
@@ -15,16 +15,16 @@
 
 <script>
 export default {
-  name: 'BlogSearch',
+  name: 'QuesSearch',
   data () {
     return {
       searchContent: ''
     }
   },
   methods: {
-    handleBlogSearch: function () {
+    handleQuesSearch: function () {
       this.$router.push({
-        path: '/blog/search/' + this.searchContent
+        path: '/question/search/' + this.searchContent
       })
     }
   }
@@ -32,16 +32,16 @@ export default {
 </script>
 
 <style>
-#BlogSearch{
+#QuesSearch{
   margin-left: 20px;
   width: 100%;
   margin-top: 20px;
 }
-.blogsearchinput{
+.quessearchinput{
   width: 80%;
   margin-left: 10px;
 }
-.blogsearchbutton{
+.quessearchbutton{
   width: 15%;
 }
 </style>

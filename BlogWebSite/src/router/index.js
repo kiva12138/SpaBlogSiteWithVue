@@ -14,6 +14,8 @@ import ResourcePage from '@/components/ResourcePage/ResourcePage'
 import PersonPage from '@/components/PersonPage/PersonalPage'
 
 import BlogSearchPage from '@/components/BlogSearchPage/BlogSearchPage'
+import QuesSearchPage from '@/components/QuesSearchPage/QuesSearchPage'
+import ResSearchPage from '@/components/ResSearchPage/ResSearchPage'
 
 Vue.use(Router)
 
@@ -84,6 +86,14 @@ let router = new Router({
       }
     },
     {
+      path: '/question/search/:keywords',
+      name: 'QuestionSearch',
+      component: QuesSearchPage,
+      meta: {
+        title: 'QuesSearchPage'
+      }
+    },
+    {
       path: '/resource',
       name: 'Resource',
       component: Resource,
@@ -97,6 +107,14 @@ let router = new Router({
       component: ResourcePage,
       meta: {
         title: 'ResourceTitle'
+      }
+    },
+    {
+      path: '/resource/search/:keywords',
+      name: 'ResourceSearch',
+      component: ResSearchPage,
+      meta: {
+        title: 'ResourceSearchTitle'
       }
     },
     {

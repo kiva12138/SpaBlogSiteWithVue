@@ -52,7 +52,7 @@
         v-model="answritten"
         class='ansarea'>
       </el-input>
-      <el-button type="primary" class='ansbutton'>发表</el-button>
+      <el-button type="primary" class='ansbutton' v-on:click='handleAnsSubmit'>发表</el-button>
     </div>
   </div>
 </template>
@@ -82,52 +82,52 @@ export default {
     this.quesContent = '&nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. &nbspContent Of This Question. '
     this.quesAnses = [
       {
-        'username': 'Name',
-        'time': '2018-3-2',
-        'content': 'This person says ...... and ......',
-        'head': require('../../assets/head.png')
+        username: 'Name',
+        time: '2018-3-2',
+        content: 'This person says ...... and ......',
+        head: require('../../assets/head.png')
       },
       {
-        'username': 'Name',
-        'time': '2018-3-2',
-        'content': 'This person says ...... and ......',
-        'head': require('../../assets/head.png')
+        username: 'Name',
+        time: '2018-3-2',
+        content: 'This person says ...... and ......',
+        head: require('../../assets/head.png')
       },
       {
-        'username': 'Name',
-        'time': '2018-3-2',
-        'content': 'This person says ...... and ......',
-        'head': require('../../assets/head.png')
+        username: 'Name',
+        time: '2018-3-2',
+        content: 'This person says ...... and ......',
+        head: require('../../assets/head.png')
       },
       {
-        'username': 'Name',
-        'time': '2018-3-2',
-        'content': 'This person says ...... and ......',
-        'head': require('../../assets/head.png')
+        username: 'Name',
+        time: '2018-3-2',
+        content: 'This person says ...... and ......',
+        head: require('../../assets/head.png')
       },
       {
-        'username': 'Name',
-        'time': '2018-3-2',
-        'content': 'This person says ...... and ......',
-        'head': require('../../assets/head.png')
+        username: 'Name',
+        time: '2018-3-2',
+        content: 'This person says ...... and ......',
+        head: require('../../assets/head.png')
       },
       {
-        'username': 'Name',
-        'time': '2018-3-2',
-        'content': 'This person says ...... and ......',
-        'head': require('../../assets/head.png')
+        username: 'Name',
+        time: '2018-3-2',
+        content: 'This person says ...... and ......',
+        head: require('../../assets/head.png')
       },
       {
-        'username': 'Name',
-        'time': '2018-3-2',
-        'content': 'This person says ...... and ......',
-        'head': require('../../assets/head.png')
+        username: 'Name',
+        time: '2018-3-2',
+        content: 'This person says ...... and ......',
+        head: require('../../assets/head.png')
       },
       {
-        'username': 'Name',
-        'time': '2018-3-2',
-        'content': 'This person says ...... and ......',
-        'head': require('../../assets/head.png')
+        username: 'Name',
+        time: '2018-3-2',
+        content: 'This person says ...... and ......',
+        head: require('../../assets/head.png')
       }
     ]
     this.quesAnsNum = this.quesAnses.length
@@ -144,6 +144,21 @@ export default {
         this.showText = '收起显示更多'
       } else if (!this.showmore) {
         this.showText = '显示更多回答'
+      }
+    },
+    handleAnsSubmit: function () {
+      var date = new Date()
+      if (!this.$session.exists()) {
+        this.$router.push('/login')
+      } else if (!(this.$cookie.get('login') === '1')) {
+        this.$router.push('/login')
+      } else {
+        this.quesAnses.push({
+          username: this.$cookie.get('username'),
+          time: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate(),
+          content: this.answritten,
+          head: require('../../assets/head.png')
+        })
       }
     }
   }

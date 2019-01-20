@@ -20,6 +20,7 @@ export default {
   methods: {
     logout: function () {
       this.$session.destroy()
+      this.$cookie.delete('login')
       this.$cookie.delete('username')
       this.$cookie.delete('phone')
       this.$cookie.delete('regtime')

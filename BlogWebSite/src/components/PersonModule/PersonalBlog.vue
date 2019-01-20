@@ -40,8 +40,14 @@ export default {
     }
   },
   created () {
-    this.publishedblogs = JSON.parse(this.$cookie.get('userblogs'))
-    this.totalPageNum = this.publishedblogs.length
+    if (!this.$session.exists()) {
+      this.$router.push('/login')
+    } else if (!(this.$cookie.get('login') === '1')) {
+      this.$router.push('/login')
+    } else {
+      this.publishedblogs = JSON.parse(this.$cookie.get('userblogs'))
+      this.totalPageNum = this.publishedblogs.length
+    }
   },
   methods: {
     pageChanged (val) {
@@ -50,7 +56,9 @@ export default {
   },
   computed: {
     displayedblogs: function () {
-      return this.publishedblogs.slice((this.currentPage - 1) * 5, this.currentPage * 5)
+      if (!(this.publishedblogs === null)) {
+        return this.publishedblogs.slice((this.currentPage - 1) * 5, this.currentPage * 5)
+      }
     }
   }
 }

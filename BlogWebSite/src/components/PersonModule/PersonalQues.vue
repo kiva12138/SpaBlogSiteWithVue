@@ -37,8 +37,14 @@ export default {
     }
   },
   created () {
-    this.publishedques = JSON.parse(this.$cookie.get('userques'))
-    this.totalPageNum = this.publishedques.length
+    if (!this.$session.exists()) {
+      this.$router.push('/login')
+    } else if (!(this.$cookie.get('login') === '1')) {
+      this.$router.push('/login')
+    } else {
+      this.publishedques = JSON.parse(this.$cookie.get('userques'))
+      this.totalPageNum = this.publishedques.length
+    }
   },
   methods: {
     pageChanged (val) {
@@ -47,7 +53,9 @@ export default {
   },
   computed: {
     displayedques: function () {
-      return this.publishedques.slice((this.currentPage - 1) * 5, this.currentPage * 5)
+      if (!(this.publishedques === null)) {
+        return this.publishedques.slice((this.currentPage - 1) * 5, this.currentPage * 5)
+      }
     }
   }
 }

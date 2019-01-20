@@ -29,7 +29,7 @@ export default {
   name: 'PersonalDetail',
   data () {
     return {
-      personalHead: require('./../../assets/head.png'),
+      personalHead: null,
       personalName: null,
       personalRegTime: null,
       personalPhone: null,
@@ -47,6 +47,7 @@ export default {
     this.numOfBlogs = this.$cookie.get('numofblog')
     this.numOfQues = this.$cookie.get('numofques')
     this.numOfRes = this.$cookie.get('numofres')
+    this.personalHead = require('../../assets/head.png')
   }
 }
 </script>

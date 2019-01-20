@@ -9,7 +9,7 @@
       v-model="commentswritten"
       class='commentsarea'>
     </el-input>
-    <el-button type="primary" class='commentsbutton'>提交</el-button>
+    <el-button type="primary" class='commentsbutton' v-on:click='handleComSubmit'>提交</el-button>
     <ul class='commentsitems'>
       <li v-for='(commentitem, index) in (showmore? articleComments: firstFiveItems)'
           v-bind:key='index'
@@ -45,41 +45,41 @@ export default {
   },
   created: function () {
     this.articleComments = [{
-      'time': '2018-12-20',
-      'user': 'UserName',
-      'content': 'Content Content Content Content Content Content Content Content'
+      time: '2018-12-20',
+      user: 'UserName',
+      content: 'Content Content Content Content Content Content Content Content'
     }, {
-      'time': '2018-12-20',
-      'user': 'UserName',
-      'content': 'Content Content Content Content Content Content Content Content'
+      time: '2018-12-20',
+      user: 'UserName',
+      content: 'Content Content Content Content Content Content Content Content'
     }, {
-      'time': '2018-12-20',
-      'user': 'UserName',
-      'content': 'Content Content Content Content Content Content Content Content'
+      time: '2018-12-20',
+      user: 'UserName',
+      content: 'Content Content Content Content Content Content Content Content'
     }, {
-      'time': '2018-12-20',
-      'user': 'UserName',
-      'content': 'Content Content Content Content Content Content Content Content'
+      time: '2018-12-20',
+      user: 'UserName',
+      content: 'Content Content Content Content Content Content Content Content'
     }, {
-      'time': '2018-12-20',
-      'user': 'UserName',
-      'content': 'Content Content Content Content Content Content Content Content'
+      time: '2018-12-20',
+      user: 'UserName',
+      content: 'Content Content Content Content Content Content Content Content'
     }, {
-      'time': '2018-12-20',
-      'user': 'UserName',
-      'content': 'Content Content Content Content Content Content Content Content'
+      time: '2018-12-20',
+      user: 'UserName',
+      content: 'Content Content Content Content Content Content Content Content'
     }, {
-      'time': '2018-12-20',
-      'user': 'UserName',
-      'content': 'Content Content Content Content Content Content Content Content'
+      time: '2018-12-20',
+      user: 'UserName',
+      content: 'Content Content Content Content Content Content Content Content'
     }, {
-      'time': '2018-12-20',
-      'user': 'UserName',
-      'content': 'Content Content Content Content Content Content Content Content'
+      time: '2018-12-20',
+      user: 'UserName',
+      content: 'Content Content Content Content Content Content Content Content'
     }, {
-      'time': '2018-12-20',
-      'user': 'UserName',
-      'content': 'Content Content Content Content Content Content Content Content'
+      time: '2018-12-20',
+      user: 'UserName',
+      content: 'Content Content Content Content Content Content Content Content'
     }
     ]
   },
@@ -96,6 +96,20 @@ export default {
       }
       if (this.showmore) {
         this.showMoreHint = '收起显示'
+      }
+    },
+    handleComSubmit: function () {
+      var date = new Date()
+      if (!this.$session.exists()) {
+        this.$router.push('/login')
+      } else if (!(this.$cookie.get('login') === '1')) {
+        this.$router.push('/login')
+      } else {
+        this.articleComments.push({
+          user: this.$cookie.get('username'),
+          time: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate(),
+          content: this.commentswritten
+        })
       }
     }
   }

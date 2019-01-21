@@ -160,6 +160,11 @@ export default {
           head: require('../../assets/head.png')
         })
       }
+      this.$message({
+        message: '评论成功',
+        type: 'success'
+      })
+      this.answritten = null
     }
   }
 }

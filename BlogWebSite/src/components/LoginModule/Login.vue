@@ -22,6 +22,10 @@
                  v-on:click='handleLogin'>
                 登录
       </el-button>
+      <el-button type="primary"
+                 v-on:click='handlejumptoreg'>
+                注册
+      </el-button>
     </form>
   </div>
 </template>
@@ -276,6 +280,13 @@ export default {
         }
       ]), {expires: '10m'})
       this.$router.push('/person')
+      this.$message({
+        message: '登录成功',
+        type: 'success'
+      })
+    },
+    handlejumptoreg: function () {
+      this.$router.push({path: '/regist'})
     }
   }
 }

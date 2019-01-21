@@ -118,6 +118,11 @@ export default {
           content: this.commentans
         })
       }
+      this.$message({
+        message: '评论成功',
+        type: 'success'
+      })
+      this.commentans = null
     }
   }
 }

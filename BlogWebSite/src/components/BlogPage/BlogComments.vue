@@ -111,6 +111,11 @@ export default {
           content: this.commentswritten
         })
       }
+      this.$message({
+        message: '评论成功',
+        type: 'success'
+      })
+      this.commentswritten = null
     }
   }
 }

@@ -18,6 +18,7 @@ import QuesSearchPage from '@/components/QuesSearchPage/QuesSearchPage'
 import ResSearchPage from '@/components/ResSearchPage/ResSearchPage'
 
 import Login from '@/components/LoginModule/Login'
+import Regist from '@/components/RegisterModule/Register'
 
 Vue.use(Router)
 
@@ -141,6 +142,14 @@ let router = new Router({
       component: Login,
       meta: {
         title: '登录'
+      }
+    },
+    {
+      path: '/regist',
+      name: 'Regist',
+      component: Regist,
+      meta: {
+        title: '注册'
       }
     }
   ]

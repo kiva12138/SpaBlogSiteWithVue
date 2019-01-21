@@ -25,11 +25,12 @@
         v-model="commentans"
         class='rescomarea'>
       </el-input>
-      <el-button type="primary"
-        class='rescombutton'
-        v-on:click='handleSubmitComment'>
-        发表
-      </el-button>
+      <div class='rescombutton'>
+        <el-button type="primary"
+          v-on:click='handleSubmitComment'>
+          发表
+        </el-button>
+      </div>
     </div>
   </div>
 </template>

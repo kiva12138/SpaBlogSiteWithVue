@@ -4,28 +4,33 @@
       <h3 class='logintitle'>请登录</h3>
       <el-row>
         <div class='idtip'>ID：</div>
-        <el-input placeholder="请输入您的ID"
+        <div class='idinput'>
+          <el-input placeholder="请输入您的ID"
                   v-model="userid"
-                  clearable
-                  class='idinput'/>
+                  clearable/>
+        </div>
       </el-row>
       <el-row>
         <div class='passwordtip'>密码：</div>
-        <el-input placeholder="请输入您的密码"
+        <div class='passwordinput'>
+          <el-input placeholder="请输入您的密码"
                   v-model="password"
                   clearable
-                  class='passwordinput'
                   type='password'/>
+        </div>
       </el-row>
-      <el-button type="primary"
-                 class="loginbutton"
+      <div class="loginbutton">
+        <el-button type="primary"
                  v-on:click='handleLogin'>
                 登录
       </el-button>
-      <el-button type="primary"
+      </div>
+      <div class='regbutton'>
+        <el-button type="primary"
                  v-on:click='handlejumptoreg'>
                 注册
-      </el-button>
+        </el-button>
+      </div>
     </form>
   </div>
 </template>
@@ -310,6 +315,13 @@ export default {
 }
 .loginbutton{
   margin-top: 20px;
+  padding: 5px;
+  display: inline-block;
+}
+.regbutton{
+  margin-top: 20px;
+  padding: 5px;
+  display: inline-block;
 }
 .idtip{
   width: 4%;

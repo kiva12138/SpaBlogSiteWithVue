@@ -2,14 +2,17 @@
   <div id='BlogComments'>
     <hr class='line' width="90%" color='#626567' SIZE='1' align='center'>
     <h4 class='commentstitle'>评论({{articleComments.length}})</h4>
-    <el-input
-      type="textarea"
-      :autosize="{ minRows: 2, maxRows: 6}"
-      placeholder="说说您的看法"
-      v-model="commentswritten"
-      class='commentsarea'>
-    </el-input>
-    <el-button type="primary" class='commentsbutton' v-on:click='handleComSubmit'>提交</el-button>
+    <div class='commentsarea'>
+      <el-input
+        type="textarea"
+        :autosize="{ minRows: 2, maxRows: 6}"
+        placeholder="说说您的看法"
+        v-model="commentswritten">
+      </el-input>
+    </div>
+    <div class='commentsbutton'>
+      <el-button type="primary" v-on:click='handleComSubmit'>提交</el-button>
+    </div>
     <ul class='commentsitems'>
       <li v-for='(commentitem, index) in (showmore? articleComments: firstFiveItems)'
           v-bind:key='index'

@@ -1,15 +1,17 @@
 <template>
   <div id="BlogSearch">
-    <el-input v-bind:placeholder="this.$route.params.keywords"
-              v-model="searchContent"
-              clearable
-              class='blogsearchinput'/>
-    <el-button type="primary"
-               icon="el-icon-search"
-               class="blogsearchbutton"
-               v-on:click='handleBlogSearch'>
-              搜索
-    </el-button>
+    <div class='blogsearchinput'>
+      <el-input v-bind:placeholder="this.$route.params.keywords"
+                v-model="searchContent"
+                clearable/>
+    </div>
+    <div class="blogsearchbutton">
+      <el-button type="primary"
+                 icon="el-icon-search"
+                 v-on:click='handleBlogSearch'>
+                搜索
+      </el-button>
+    </div>
   </div>
 </template>
 
@@ -40,8 +42,10 @@ export default {
 .blogsearchinput{
   width: 80%;
   margin-left: 10px;
+  display: inline-block;
 }
 .blogsearchbutton{
   width: 15%;
+  display: inline-block;
 }
 </style>

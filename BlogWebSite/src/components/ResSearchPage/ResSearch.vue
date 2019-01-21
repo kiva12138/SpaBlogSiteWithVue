@@ -1,15 +1,17 @@
 <template>
   <div id="ResSearch">
+  <div class='ressearchinput'>
     <el-input v-bind:placeholder="this.$route.params.keywords"
               v-model="searchContent"
-              clearable
-              class='ressearchinput'/>
+              clearable/>
+  </div>
+  <div class="ressearchbutton">
     <el-button type="primary"
                icon="el-icon-search"
-               class="ressearchbutton"
                v-on:click='handleResSearch'>
               搜索
     </el-button>
+  </div>
   </div>
 </template>
 
@@ -39,8 +41,10 @@ export default {
 .ressearchinput{
   width: 80%;
   margin-left: 10px;
+  display: inline-block;
 }
 .ressearchbutton{
   width: 15%;
+  display: inline-block;
 }
 </style>

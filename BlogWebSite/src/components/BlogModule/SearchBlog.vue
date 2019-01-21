@@ -1,15 +1,17 @@
 <template>
   <div id="SearchBlog">
-    <el-input placeholder="搜索博客"
+    <div class='searchinput'>
+      <el-input placeholder="搜索博客"
               v-model="searchContent"
-              clearable
-              class='searchinput'/>
-    <el-button type="primary"
-               icon="el-icon-search"
-               class="searchbutton"
-               v-on:click='handleBlogSearch'>
-              搜索
-    </el-button>
+              clearable/>
+    </div>
+    <div class="searchbutton">
+      <el-button type="primary"
+                 icon="el-icon-search"
+                 v-on:click='handleBlogSearch'>
+                搜索
+      </el-button>
+    </div>
   </div>
 </template>
 
@@ -39,6 +41,7 @@ export default {
 .searchinput{
   margin-top: 20px;
   width: 70%;
+  display: inline-block;
 }
 .searchbutton{
   margin-top: 20px;

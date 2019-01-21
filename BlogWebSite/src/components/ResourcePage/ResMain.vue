@@ -71,7 +71,7 @@ export default {
   color: #424242;
   display: inline-block;
   vertical-align: top;
-  width: 85%;
+  width: 80%;
 }
 .resicon{
   vertical-align: top;

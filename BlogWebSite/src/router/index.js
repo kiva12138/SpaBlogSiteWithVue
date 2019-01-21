@@ -151,8 +151,12 @@ let router = new Router({
       meta: {
         title: '注册'
       }
+    },
+    {
+      path: '/blogsite', redirect: '/'
     }
-  ]
+  ],
+  base: '/blogsite/'
 })
 
 export default router

@@ -52,7 +52,9 @@
         v-model="answritten"
         class='ansarea'>
       </el-input>
-      <el-button type="primary" class='ansbutton' v-on:click='handleAnsSubmit'>发表</el-button>
+      <div class='ansbutton'>
+        <el-button type="primary" v-on:click='handleAnsSubmit'>发表</el-button>
+      </div>
     </div>
   </div>
 </template>

@@ -16,10 +16,8 @@
       <el-form-item label="密码" :label-width="formLabelWidth">
         <el-input v-model="password" placeholder="请输入密码"></el-input>
       </el-form-item>
-      <el-form-item class='regbutton'>
-        <el-button type="primary" @click="handleRegist">确 定</el-button>
-      </el-form-item>
     </el-form>
+    <el-button type="primary" @click="handleRegist">确 定</el-button>
   </div>
 </template>
 
@@ -59,8 +57,5 @@ export default {
   width: 30%;
   text-align: left;
   margin-left: 32%;
-}
-.regbutton{
-  text-align: center;
 }
 </style>

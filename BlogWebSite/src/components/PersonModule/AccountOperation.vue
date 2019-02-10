@@ -39,6 +39,11 @@
       </div>
     </el-dialog>
     </div>
+    <div class="accountop">
+      <el-button type="primary" v-on:click="handleWriteBlog">撰写博客</el-button>
+      <el-button type="primary" v-on:click="handleWriteQues">提问问题</el-button>
+      <el-button type="primary" v-on:click="handleUploadRes">上传资源</el-button>
+    </div>
   </div>
 </template>
 
@@ -86,6 +91,15 @@ export default {
         message: '修改成功',
         type: 'success'
       })
+    },
+    handleWriteBlog: function () {
+
+    },
+    handleWriteQues: function () {
+
+    },
+    handleUploadRes: function () {
+
     }
   }
 }
@@ -110,5 +124,9 @@ export default {
 .personopmain{
   margin-left: 40px;
   margin-top: 40px;
+}
+.accountop{
+  margin-left: 40px;
+  margin-top: 20px;
 }
 </style>

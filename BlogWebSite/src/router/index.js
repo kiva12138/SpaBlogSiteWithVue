@@ -20,6 +20,10 @@ import ResSearchPage from '@/components/ResSearchPage/ResSearchPage'
 import Login from '@/components/LoginModule/Login'
 import Regist from '@/components/RegisterModule/Register'
 
+import BlogWrite from '@/components/BlogWritePage/BlogWrite'
+import QuesWrite from '@/components/QuesWritePage/QuesWrite'
+import ResUpload from '@/components/ResUploadPage/ResUpload'
+
 Vue.use(Router)
 
 let router = new Router({
@@ -73,6 +77,14 @@ let router = new Router({
       }
     },
     {
+      path: '/blog/write',
+      name: 'BlogWrite',
+      component: BlogWrite,
+      meta: {
+        title: 'BlogWrite'
+      }
+    },
+    {
       path: '/question',
       name: 'Question',
       component: Question,
@@ -97,6 +109,14 @@ let router = new Router({
       }
     },
     {
+      path: '/question/write',
+      name: 'QuesWrite',
+      component: QuesWrite,
+      meta: {
+        title: 'QuesWrite'
+      }
+    },
+    {
       path: '/resource',
       name: 'Resource',
       component: Resource,
@@ -118,6 +138,14 @@ let router = new Router({
       component: ResSearchPage,
       meta: {
         title: 'ResourceSearchTitle'
+      }
+    },
+    {
+      path: '/resource/upload',
+      name: 'ResUpload',
+      component: ResUpload,
+      meta: {
+        title: 'ResUpload'
       }
     },
     {
